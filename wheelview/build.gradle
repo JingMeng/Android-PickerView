@@ -1,15 +1,15 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-//apply plugin: 'com.novoda.bintray-release'//添加插件
+//apply plugin: 'com.novoda.bintray-release'//??????
 
 
 
 android {
-    compileSdkVersion 26
+    namespace 'com.contrarywind.view'
+    compileSdk 34
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 26
+        minSdk 14
+        targetSdk 34
         versionCode 31
         versionName "4.1.0"
     }
@@ -18,6 +18,7 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    
     }
     lintOptions {
         abortOnError false
@@ -25,7 +26,7 @@ android {
 }
 
 //allprojects {
-//    tasks.withType(Javadoc) {//兼容中文字符
+//    tasks.withType(Javadoc) {//?????????
 //        options{
 //            encoding "UTF-8"
 //            charSet 'UTF-8'
@@ -33,16 +34,13 @@ android {
 //        }
 //    }
 //}
-//publish {
-//    userOrg = 'contrarywind'//bintray.com 用户名/组织名 user/org name
-//    groupId = 'com.contrarywind'//JCenter上显示的路径 path
-//    artifactId = 'wheelview'//项目名称 project name
-//    publishVersion = '4.1.0'//版本号 version code
-//    desc = 'this is a wheelview for android'//项目描述 description
-//    website = 'https://github.com/Bigkoo/Android-PickerView' //项目网址链接 link
-//}
+//
 
 dependencies {
 //    compile fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:support-annotations:28.0.0'
+    implementation 'androidx.annotation:annotation:1.1.0'
 }
+
+
+
+
